@@ -192,7 +192,7 @@ export const products: Product[] = [
     ipRating: 'IP65',
     warranty: '2 Years',
     features: ['UFO Round Design', 'For Highways & Heavy Outdoor', 'High Lumen Efficacy', 'Industrial Grade'],
-    image: '/images/products/high-way-light.jpeg',
+    image: '/images/products/high-way-light.png',
     badge: 'High Way',
   },
 ];
@@ -216,7 +216,7 @@ export const categories: Category[] = [
     id: 'high-way-light',
     name: 'High Way Lighting',
     description: 'Powerful High Way LED luminaires designed for expressways, main roads, and heavy outdoor spaces.',
-    image: '/images/products/high-way-light.jpeg',
+    image: '/images/products/high-way-light.png',
     productCount: 1,
   },
 ];
