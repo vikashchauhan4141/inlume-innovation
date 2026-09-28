@@ -15,7 +15,7 @@ const categoryDataMap: Record<string, { appBg: string; fixture: string; altApp: 
   },
   'high-way-light': {
     fixture: '/images/products/high-way-light.jpeg',
-    appBg: '/images/categories/street-light-app.png',
+    appBg: '/images/categories/highway-app.jpg',
     altApp: 'Illuminated Expressway Highway Road at Night',
   },
 };
@@ -27,9 +27,6 @@ export default function CategorySection() {
         
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <span className="inline-block px-3.5 py-1 bg-[#06315B]/5 text-[#06315B] text-xs font-bold rounded-full border border-[#06315B]/10 mb-3 uppercase tracking-wider">
-            Product Categories
-          </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#06315B] mb-3">
             Lighting Solutions for <span className="text-amber-500">Every Space</span>
           </h2>

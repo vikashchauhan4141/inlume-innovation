@@ -123,11 +123,7 @@ export default function AboutClient() {
               className="lg:col-span-6 space-y-6"
             >
               <div>
-                <span className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-amber-500/10 text-amber-600 text-xs font-bold rounded-full uppercase tracking-wider mb-3 border border-amber-500/20">
-                  <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-                  Our Mission & Vision
-                </span>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#06315B] leading-[1.15] tracking-tight">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#06315B] leading-[1.15] tracking-tight mb-4">
                   Illuminating Spaces with <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-amber-600">Precision & Power</span>
                 </h2>
               </div>
@@ -203,9 +199,6 @@ export default function AboutClient() {
       <section className="py-16 sm:py-20 bg-slate-50 border-y border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="inline-block px-3.5 py-1 bg-[#06315B]/5 text-[#06315B] text-xs font-bold rounded-full border border-[#06315B]/10 uppercase tracking-wider mb-2">
-              Our Core Standards
-            </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-[#06315B]">
               Built for Performance, <span className="text-amber-500">Made to Last</span>
             </h2>
@@ -242,9 +235,6 @@ export default function AboutClient() {
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="inline-block px-3 py-1 bg-amber-500/10 text-amber-600 text-xs font-bold rounded-full uppercase tracking-wider mb-2">
-              Our Growth
-            </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-[#06315B]">
               The Inlume <span className="text-amber-500">Journey</span>
             </h2>

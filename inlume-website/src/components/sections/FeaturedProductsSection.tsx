@@ -9,9 +9,6 @@ export default function FeaturedProductsSection() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-12 gap-4">
           <div>
-            <span className="inline-block px-4 py-1.5 bg-amber-50 text-amber-600 text-sm font-semibold rounded-full border border-amber-200 mb-3 uppercase tracking-wider">
-              Featured Products
-            </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#06315B]">
               Our Popular <span className="text-amber-500">Products</span>
             </h2>
