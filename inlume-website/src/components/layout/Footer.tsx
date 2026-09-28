@@ -26,12 +26,12 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center mb-6">
-              <div className="relative h-11 w-44 bg-white px-3 py-1.5 rounded-xl shadow-sm flex items-center justify-center overflow-hidden">
+              <div className="relative h-12 w-48 bg-white px-3.5 py-2 rounded-xl shadow-md border border-white/20 flex items-center justify-center overflow-hidden">
                 <Image
-                  src="/LOGO.jpeg"
-                  alt="Inlume Innovations"
-                  width={150}
-                  height={38}
+                  src="/logo-transparent.png"
+                  alt="Inlume Innovations Logo"
+                  width={160}
+                  height={42}
                   className="object-contain max-h-full"
                 />
               </div>

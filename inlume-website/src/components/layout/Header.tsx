@@ -34,14 +34,14 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group flex-shrink-0">
-            <div className="relative h-10 w-36 md:h-12 md:w-44">
+            <div className="relative h-12 w-44 sm:h-14 sm:w-52 md:h-16 md:w-60">
               <Image
-                src="/LOGO.jpeg"
+                src="/logo-transparent.png"
                 alt="Inlume Innovations Logo"
                 fill
-                className="object-contain mix-blend-multiply"
+                className="object-contain object-left"
                 priority
-                sizes="176px"
+                sizes="240px"
               />
             </div>
           </Link>
