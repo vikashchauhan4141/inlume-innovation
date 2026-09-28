@@ -79,58 +79,62 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-20 bg-white">
+      {/* Mission Section - Ultra Minimal & Classy */}
+      <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <span className="inline-block px-4 py-1.5 bg-amber-50 text-amber-600 text-sm font-semibold rounded-full border border-amber-200 mb-4 uppercase tracking-wider">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            {/* Left Side: Mission Statement */}
+            <div className="lg:col-span-6 space-y-4">
+              <span className="inline-block px-3.5 py-1 bg-amber-500/10 text-amber-600 text-xs font-bold rounded-full uppercase tracking-wider">
                 Our Mission
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#06315B] mb-6 leading-tight">
-                Illuminating the World with <span className="text-amber-500">Smarter LED Technology</span>
+
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#06315B] leading-tight tracking-tight">
+                Illuminating Spaces with <span className="text-amber-500">Precision & Power</span>
               </h2>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                At Inlume Innovations, we believe that great lighting transforms spaces. From the busiest highways to the deepest warehouses, our LED solutions deliver consistent, reliable illumination that drives efficiency and safety.
+
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                At Inlume Innovations, we design and supply commercial-grade LED lighting built for long-term performance. From expressways to industrial warehouses, our fixtures deliver high brightness, lower energy costs, and IP66 all-weather durability.
               </p>
-              <p className="text-gray-600 leading-relaxed mb-8">
-                Founded with a commitment to quality and sustainability, we source only premium-grade components and subject every product to rigorous quality checks. Our IP66-rated fixtures, backed by a 2-year warranty, are trusted by businesses, municipalities, and contractors across India.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center gap-3 bg-[#06315B]/5 px-4 py-3 rounded-xl">
-                  <span className="text-2xl">📋</span>
-                  <div>
-                    <p className="font-bold text-[#06315B] text-sm">GST Registered</p>
-                    <p className="text-gray-500 text-xs">09CXKPD4992D1Z8</p>
-                  </div>
+
+              <div className="flex flex-wrap gap-4 pt-2 text-xs text-gray-500 font-medium">
+                <div className="px-3 py-1.5 bg-slate-100 rounded-lg border border-slate-200">
+                  <strong className="text-[#06315B]">GST:</strong> 09CXKPD4992D1Z8
                 </div>
-                <div className="flex items-center gap-3 bg-amber-50 px-4 py-3 rounded-xl">
-                  <span className="text-2xl">🏆</span>
-                  <div>
-                    <p className="font-bold text-[#06315B] text-sm">Quality Certified</p>
-                    <p className="text-gray-500 text-xs">IP66 Rated Products</p>
-                  </div>
+                <div className="px-3 py-1.5 bg-slate-100 rounded-lg border border-slate-200">
+                  <strong className="text-[#06315B]">Rating:</strong> IP66 Weatherproof
+                </div>
+                <div className="px-3 py-1.5 bg-slate-100 rounded-lg border border-slate-200">
+                  <strong className="text-[#06315B]">Warranty:</strong> 2 Years Direct
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { num: '500+', label: 'Projects Completed', icon: '🏗️' },
-                { num: '10K+', label: 'LED Units Installed', icon: '💡' },
-                { num: '80%', label: 'Energy Savings', icon: '⚡' },
-                { num: '100%', label: 'Satisfaction Rate', icon: '⭐' },
-              ].map((s) => (
-                <div
-                  key={s.label}
-                  className="bg-[#06315B] rounded-2xl p-6 text-center hover:-translate-y-1 transition-transform duration-300"
-                >
-                  <div className="text-4xl mb-2">{s.icon}</div>
-                  <div className="text-3xl font-bold text-amber-400 mb-1">{s.num}</div>
-                  <div className="text-white/70 text-sm">{s.label}</div>
-                </div>
-              ))}
+
+            {/* Right Side: Clean Minimal Stats Grid */}
+            <div className="lg:col-span-6">
+              <div className="grid grid-cols-2 gap-px bg-slate-200 rounded-2xl overflow-hidden border border-slate-200 shadow-xs">
+                {[
+                  { num: '500+', label: 'Projects Completed' },
+                  { num: '10K+', label: 'LED Units Installed' },
+                  { num: '80%', label: 'Energy Savings' },
+                  { num: '100%', label: 'Quality Tested' },
+                ].map((s, idx) => (
+                  <div key={idx} className="bg-slate-50/80 p-6 sm:p-8 text-center hover:bg-white transition-colors duration-200">
+                    <div className="text-3xl sm:text-4xl font-extrabold text-[#06315B] tracking-tight mb-1">
+                      {s.num}
+                    </div>
+                    <div className="text-xs sm:text-sm font-medium text-gray-500">
+                      {s.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
+
           </div>
+
         </div>
       </section>
 
