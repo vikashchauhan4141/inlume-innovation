@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { FaWhatsapp } from 'react-icons/fa';
 import {
   ShieldCheck,
   Zap,
@@ -281,12 +282,15 @@ export default function AboutClient() {
             >
               Explore Products
             </Link>
-            <Link
-              href="/contact"
-              className="px-6 py-3.5 bg-white/10 hover:bg-white/20 text-white font-bold text-sm rounded-xl border border-white/25 transition-all duration-300 backdrop-blur-md"
+            <a
+              href="https://wa.me/918368690828?text=Hi%20Inlume%20Innovations%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20a%20custom%20LED%20lighting%20project."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-sm rounded-xl transition-all duration-300 shadow-xl hover:scale-105"
             >
-              Request Custom Quote
-            </Link>
+              <FaWhatsapp className="w-4 h-4 text-white" />
+              Chat on WhatsApp
+            </a>
           </div>
         </div>
       </section>

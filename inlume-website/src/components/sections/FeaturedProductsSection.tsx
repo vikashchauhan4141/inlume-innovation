@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { featuredProducts } from '@/data/products';
 import ProductCard from '@/components/ui/ProductCard';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export default function FeaturedProductsSection() {
   return (
@@ -41,15 +42,15 @@ export default function FeaturedProductsSection() {
               We work with architects, contractors, and businesses to deliver tailored LED solutions.
             </p>
           </div>
-          <Link
-            href="/contact"
-            className="flex-shrink-0 inline-flex items-center gap-2 px-7 py-4 bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl transition-all duration-300 hover:-translate-y-0.5 shadow-lg hover:shadow-amber-500/30 text-base"
+          <a
+            href="https://wa.me/918368690828?text=Hi%20Inlume%20Innovations%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20a%20custom%20LED%20lighting%20solution."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-shrink-0 inline-flex items-center gap-2 px-7 py-4 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold rounded-xl transition-all duration-300 hover:-translate-y-0.5 shadow-lg text-base"
           >
-            Get a Free Quote
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+            <FaWhatsapp className="w-5 h-5 text-white" />
+            Chat on WhatsApp
+          </a>
         </div>
       </div>
     </section>

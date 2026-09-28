@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { FaWhatsapp } from 'react-icons/fa';
+import { FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -69,20 +69,18 @@ export default function Header() {
               href="https://wa.me/918368690828?text=Hi%20Inlume%20Innovations%2C%20I%20would%20like%20to%20inquire%20about%20your%20LED%20lighting%20products."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-sm rounded-lg transition-all duration-300 shadow-sm hover:shadow-emerald-500/20"
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-sm rounded-lg transition-all duration-300 shadow-xs hover:shadow-emerald-500/20"
             >
               <FaWhatsapp className="w-4 h-4 text-white" />
               WhatsApp
             </a>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#06315B] hover:bg-[#0a4f8a] text-white font-semibold text-sm rounded-lg transition-all duration-300"
+            <a
+              href="tel:+918368690828"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#06315B] hover:bg-[#0a4f8a] text-white font-semibold text-sm rounded-lg transition-all duration-300 shadow-xs"
             >
-              Get a Quote
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
+              <FaPhoneAlt className="w-3.5 h-3.5 text-amber-400" />
+              Call Us
+            </a>
           </div>
 
           {/* Mobile Hamburger */}
@@ -130,15 +128,13 @@ export default function Header() {
                 <FaWhatsapp className="w-5 h-5 text-white" />
                 Chat on WhatsApp
               </a>
-              <Link
-                href="/contact"
+              <a
+                href="tel:+918368690828"
                 className="flex items-center justify-center gap-2 w-full px-5 py-3 bg-[#06315B] hover:bg-[#0a4f8a] text-white font-semibold rounded-xl transition-colors"
               >
-                Get a Quote
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
+                <FaPhoneAlt className="w-4 h-4 text-amber-400" />
+                Call +91 8368690828
+              </a>
             </div>
           </div>
         </div>

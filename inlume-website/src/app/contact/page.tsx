@@ -103,14 +103,38 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right: Form */}
+            {/* Right: Interactive Google Map Location */}
             <div className="lg:col-span-3">
-              <div className="bg-[#f8fafc] rounded-3xl p-8 border border-gray-100">
-                <h2 className="text-2xl font-bold text-[#06315B] mb-2">Send Us a Message</h2>
-                <p className="text-gray-500 text-sm mb-8">
-                  Fill in the form below and our team will get back to you within 24 hours.
-                </p>
-                <ContactForm />
+              <div className="bg-[#f8fafc] rounded-3xl p-6 sm:p-8 border border-gray-200/80 shadow-xs">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+                  <div>
+                    <h2 className="text-2xl font-bold text-[#06315B]">Our Location</h2>
+                    <p className="text-gray-500 text-xs sm:text-sm">
+                      Visit our office or reach out via Call & WhatsApp for product inquiries.
+                    </p>
+                  </div>
+                  <a
+                    href="tel:+918368690828"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#06315B] text-white text-xs font-bold rounded-xl hover:bg-[#0a4f8a] transition-colors whitespace-nowrap shadow-xs"
+                  >
+                    Call +91 8368690828
+                  </a>
+                </div>
+
+                {/* Responsive Google Maps Embed */}
+                <div className="relative w-full h-[380px] sm:h-[440px] rounded-2xl overflow-hidden border border-slate-200/90 shadow-md">
+                  <iframe
+                    title="Inlume Innovations Office Location Map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.83923192706!2d77.06889754725782!3d28.52728034389636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={false}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full h-full grayscale-[0.2] hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
               </div>
             </div>
           </div>

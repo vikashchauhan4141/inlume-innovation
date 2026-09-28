@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export default function HeroSection() {
   return (
@@ -49,12 +50,15 @@ export default function HeroSection() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full border border-white/25 backdrop-blur-md shadow-md transition-all duration-300 text-sm sm:text-base"
+              <a
+                href="https://wa.me/918368690828?text=Hi%20Inlume%20Innovations%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20LED%20lighting."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold rounded-full shadow-lg shadow-emerald-600/30 transition-all duration-300 text-sm sm:text-base transform hover:-translate-y-0.5"
               >
-                Get a Quote
-              </Link>
+                <FaWhatsapp className="w-5 h-5 text-white" />
+                Chat on WhatsApp
+              </a>
             </div>
 
             {/* Quick Spec Highlights */}
