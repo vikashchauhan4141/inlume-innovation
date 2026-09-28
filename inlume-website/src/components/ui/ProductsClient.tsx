@@ -12,7 +12,7 @@ const categoryFilters: { id: ProductCategory | 'all'; label: string }[] = [
   { id: 'rgb-flood-light', label: 'RGB Flood Lights' },
   { id: 'dob-flood-light', label: 'DOB Flood Lights' },
   { id: 'well-glass-light', label: 'Well Glass Lights' },
-  { id: 'high-bay-light', label: 'High Bay Lights' },
+  { id: 'high-way-light', label: 'High Way Lights' },
 ];
 
 export default function ProductsClient() {

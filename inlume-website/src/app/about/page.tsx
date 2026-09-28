@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'About Us',
@@ -40,23 +41,41 @@ const milestones = [
 export default function AboutPage() {
   return (
     <>
-      {/* Page Hero */}
-      <section className="pt-24 pb-14 bg-gradient-to-br from-[#06315B] via-[#0a4f8a] to-[#041f3a] relative overflow-hidden">
-        <div className="absolute inset-0 section-dots opacity-30" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <nav className="flex items-center justify-center gap-2 text-sm text-white/60 mb-6" aria-label="Breadcrumb">
+      {/* Page Hero - Minimal & Sleek Banner */}
+      <section className="relative min-h-[220px] sm:min-h-[260px] flex items-center overflow-hidden bg-slate-950 border-b border-gray-800">
+        
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero-banner.jpg"
+            alt="Inlume Architectural LED Lighting Installation"
+            fill
+            className="object-cover object-center opacity-60"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/85 to-slate-950/50" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/60" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 pb-8 w-full text-left">
+          
+          {/* Breadcrumb Pill */}
+          <nav className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-xs text-gray-300 mb-3 border border-white/15" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-3.5 h-3.5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-            <span className="text-white">About Us</span>
+            <span className="text-blue-400 font-semibold">About Us</span>
           </nav>
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            About <span className="text-amber-400">Inlume Innovations</span>
+
+          <h1 className="text-3xl sm:text-4xl font-black text-white mb-2 tracking-tight">
+            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-amber-300">Inlume Innovations</span>
           </h1>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            We are a passionate team of lighting engineers and innovators committed to making spaces brighter, safer, and more energy-efficient.
+
+          <p className="text-gray-300 text-xs sm:text-sm max-w-xl">
+            Empowering commercial & industrial spaces across India with sustainable, heavy-duty LED lighting.
           </p>
+
         </div>
       </section>
 
@@ -111,6 +130,59 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us / Built for Performance */}
+      <section className="py-16 bg-slate-50 border-y border-gray-200/80" id="features">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <span className="inline-block px-3.5 py-1 bg-[#06315B]/5 text-[#06315B] text-xs font-bold rounded-full border border-[#06315B]/10 mb-2 uppercase tracking-wider">
+              Why Choose Inlume
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#06315B] mb-2">
+              Built for Performance, <span className="text-amber-500">Made to Last</span>
+            </h2>
+            <p className="text-gray-500 text-xs sm:text-sm max-w-xl mx-auto">
+              Every Inlume product is engineered with precision and tested for high reliability in real-world conditions.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+            {[
+              {
+                icon: '⚡',
+                title: 'Energy Efficient',
+                desc: 'Save up to 80% on electricity bills with high-lumen LED chips.',
+              },
+              {
+                icon: '🛡️',
+                title: 'Long Lasting',
+                desc: 'Heavy-duty aluminum housing & IP66 protection against dust & water.',
+              },
+              {
+                icon: '⚙️',
+                title: 'Inbuilt Surge Protection',
+                desc: 'Safeguarded against high voltage fluctuations up to 6KV.',
+              },
+              {
+                icon: '🏭',
+                title: 'Wide Applications',
+                desc: 'Ideal for streets, factories, warehouses, sports grounds & parks.',
+              },
+            ].map((f) => (
+              <div
+                key={f.title}
+                className="bg-white rounded-xl p-5 border border-gray-200/80 shadow-xs hover:shadow-md transition-all duration-200"
+              >
+                <div className="w-9 h-9 rounded-lg bg-blue-100/80 text-blue-700 flex items-center justify-center text-base mb-2.5">
+                  {f.icon}
+                </div>
+                <h3 className="font-bold text-[#06315B] text-sm mb-1">{f.title}</h3>
+                <p className="text-gray-500 text-xs leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

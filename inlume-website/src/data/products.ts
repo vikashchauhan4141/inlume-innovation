@@ -47,7 +47,7 @@ export const products: Product[] = [
   },
   {
     id: 'sl-100w',
-    name: '100W LED Street Light',
+    name: '100W LED Highway Street Light',
     category: 'street-light',
     wattage: 100,
     voltage: '220V AC',
@@ -140,7 +140,7 @@ export const products: Product[] = [
     ipRating: 'IP66',
     warranty: '2 Years',
     features: ['Lance Model DOB', 'Inbuilt 6KV Circuit', 'Industrial Grade', 'High Lumen Output'],
-    image: '/images/products/dob-150w.png',
+    image: '/images/products/dob-150w-upright.png',
   },
   {
     id: 'dob-200w',
@@ -179,11 +179,11 @@ export const products: Product[] = [
     image: '/images/products/wgl-1.png',
   },
 
-  // ─── LED High Bay Light ───
+  // ─── LED High Way Light ───
   {
     id: 'hb-1',
-    name: 'LED High Bay Light',
-    category: 'high-bay-light',
+    name: 'LED High Way Light',
+    category: 'high-way-light',
     wattage: 0,
     voltage: '220V AC',
     lumens: '140–170 lm/W',
@@ -191,9 +191,9 @@ export const products: Product[] = [
     body: 'Aluminium',
     ipRating: 'IP65',
     warranty: '2 Years',
-    features: ['UFO Round Design', 'For Warehouses & Factories', 'High Lumen Efficacy', 'Industrial Grade'],
-    image: '/images/products/hb-1.png',
-    badge: 'Industrial',
+    features: ['UFO Round Design', 'For Highways & Heavy Outdoor', 'High Lumen Efficacy', 'Industrial Grade'],
+    image: '/images/products/high-way-light.jpeg',
+    badge: 'High Way',
   },
 ];
 
@@ -202,21 +202,21 @@ export const categories: Category[] = [
     id: 'street-light',
     name: 'Street Lighting',
     description: 'Reliable LED street lighting solutions for roads, highways, campuses and outdoor areas.',
-    image: '/images/categories/street-light.jpg',
+    image: '/images/products/sl-100w.png',
     productCount: 4,
   },
   {
     id: 'dob-flood-light',
     name: 'Flood Lighting',
     description: 'High-performance LED flood lights for commercial, industrial and outdoor applications.',
-    image: '/images/categories/flood-light.jpg',
+    image: '/images/products/dob-100w.png',
     productCount: 7,
   },
   {
-    id: 'high-bay-light',
-    name: 'Industrial Lighting',
-    description: 'Powerful LED lighting solutions designed for warehouses, factories and large spaces.',
-    image: '/images/categories/high-bay.jpg',
+    id: 'high-way-light',
+    name: 'High Way Lighting',
+    description: 'Powerful High Way LED luminaires designed for expressways, main roads, and heavy outdoor spaces.',
+    image: '/images/products/high-way-light.jpeg',
     productCount: 1,
   },
 ];

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import ProductsClient from '@/components/ui/ProductsClient';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Products',
@@ -12,24 +13,41 @@ export const metadata: Metadata = {
 export default function ProductsPage() {
   return (
     <>
-      {/* Page Hero */}
-      <section className="pt-24 pb-14 bg-gradient-to-br from-[#06315B] via-[#0a4f8a] to-[#041f3a] relative overflow-hidden">
-        <div className="absolute inset-0 section-dots opacity-30" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Breadcrumb */}
-          <nav className="flex items-center justify-center gap-2 text-sm text-white/60 mb-6" aria-label="Breadcrumb">
+      {/* Page Hero - Minimal & Sleek Banner */}
+      <section className="relative min-h-[220px] sm:min-h-[260px] flex items-center overflow-hidden bg-slate-950 border-b border-gray-800">
+        
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero-composite.jpg"
+            alt="Inlume LED Products Collection"
+            fill
+            className="object-cover object-center opacity-60"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/85 to-slate-950/50" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/60" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 pb-8 w-full text-left">
+          
+          {/* Breadcrumb Pill */}
+          <nav className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-xs text-gray-300 mb-3 border border-white/15" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-3.5 h-3.5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-            <span className="text-white">Products</span>
+            <span className="text-blue-400 font-semibold">Products</span>
           </nav>
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Our <span className="text-amber-400">Product Range</span>
+
+          <h1 className="text-3xl sm:text-4xl font-black text-white mb-2 tracking-tight">
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-amber-300">Product Range</span>
           </h1>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Discover our comprehensive range of energy-efficient LED lighting solutions — engineered for reliability, built to last.
+
+          <p className="text-gray-300 text-xs sm:text-sm max-w-xl">
+            High-efficiency LED luminaires engineered for reliability, durability, and maximum illumination.
           </p>
+
         </div>
       </section>
 

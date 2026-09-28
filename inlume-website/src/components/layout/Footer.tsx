@@ -13,7 +13,7 @@ const footerLinks = {
     { label: 'RGB Flood Lights', href: '/products?category=rgb-flood-light' },
     { label: 'DOB Flood Lights', href: '/products?category=dob-flood-light' },
     { label: 'Well Glass Lights', href: '/products?category=well-glass-light' },
-    { label: 'LED High Bay Lights', href: '/products?category=high-bay-light' },
+    { label: 'LED High Way Lights', href: '/products?category=high-way-light' },
   ],
 };
 
@@ -26,13 +26,13 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center mb-6">
-              <div className="relative h-10 w-40">
+              <div className="relative h-11 w-44 bg-white px-3 py-1.5 rounded-xl shadow-sm flex items-center justify-center overflow-hidden">
                 <Image
                   src="/LOGO.jpeg"
                   alt="Inlume Innovations"
-                  fill
-                  className="object-contain brightness-0 invert"
-                  sizes="160px"
+                  width={150}
+                  height={38}
+                  className="object-contain max-h-full"
                 />
               </div>
             </Link>

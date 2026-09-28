@@ -20,7 +20,7 @@ export type ProductCategory =
   | 'rgb-flood-light'
   | 'dob-flood-light'
   | 'well-glass-light'
-  | 'high-bay-light';
+  | 'high-way-light';
 
 export interface Category {
   id: ProductCategory;
