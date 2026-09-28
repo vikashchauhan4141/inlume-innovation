@@ -1,0 +1,12 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#1a1a2e"/>
+  <rect x="0" y="300" width="800" height="200" fill="#0f172a"/>
+  <circle cx="400" cy="200" r="120" fill="#F59E0B" opacity="0.3"/>
+  <circle cx="400" cy="180" r="80" fill="#F59E0B" opacity="0.6"/>
+  <circle cx="400" cy="170" r="50" fill="#FCD34D"/>
+  <circle cx="400" cy="165" r="25" fill="white"/>
+  <rect x="390" y="20" width="20" height="80" fill="#374151"/>
+  <line x1="400" y1="290" x2="100" y2="480" stroke="#F59E0B" stroke-width="2" opacity="0.2"/>
+  <line x1="400" y1="290" x2="700" y2="480" stroke="#F59E0B" stroke-width="2" opacity="0.2"/>
+  <text x="400" y="450" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="white">Industrial High Bay Lighting</text>
+</svg>
