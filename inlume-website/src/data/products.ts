@@ -182,17 +182,17 @@ export const products: Product[] = [
   // ─── LED High Way Light ───
   {
     id: 'hb-1',
-    name: 'LED High Way Light',
+    name: '150W LED High Way Light',
     category: 'high-way-light',
-    wattage: 0,
+    wattage: 150,
     voltage: '220V AC',
     lumens: '140–170 lm/W',
     colorTemp: '5500K–6500K',
     body: 'Aluminium',
-    ipRating: 'IP65',
+    ipRating: 'IP66',
     warranty: '2 Years',
     features: ['UFO Round Design', 'For Highways & Heavy Outdoor', 'High Lumen Efficacy', 'Industrial Grade'],
-    image: '/images/products/high-way-light.png',
+    image: '/images/products/hibay-light-150w.png',
     badge: 'High Way',
   },
 ];
@@ -216,7 +216,7 @@ export const categories: Category[] = [
     id: 'high-way-light',
     name: 'High Way Lighting',
     description: 'Powerful High Way LED luminaires designed for expressways, main roads, and heavy outdoor spaces.',
-    image: '/images/products/high-way-light.png',
+    image: '/images/products/hibay-light-150w.png',
     productCount: 1,
   },
 ];

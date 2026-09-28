@@ -14,7 +14,7 @@ const categoryDataMap: Record<string, { appBg: string; fixture: string; altApp: 
     altApp: 'Building Wall Flood Light Illuminating Ground',
   },
   'high-way-light': {
-    fixture: '/images/products/high-way-light.png',
+    fixture: '/images/products/hibay-light-150w.png',
     appBg: '/images/categories/highway-app.jpg',
     altApp: 'Illuminated Expressway Highway Road at Night',
   },
