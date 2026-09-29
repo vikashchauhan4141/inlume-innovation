@@ -13,6 +13,7 @@ const categoryLabels: Record<string, string> = {
   'dob-flood-light': 'DOB Flood Light',
   'well-glass-light': 'Well Glass Light',
   'high-bay-light': 'High Bay Light',
+  'high-way-light': 'High Way Light',
 };
 
 export default function ProductCard({ product, showDetails = false }: ProductCardProps) {
@@ -20,25 +21,28 @@ export default function ProductCard({ product, showDetails = false }: ProductCar
     <div className="product-card group bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-amber-500/30 transition-all duration-300 flex flex-col">
 
       {/* ── Image Area ── */}
-      <div className="relative h-56 bg-gray-50 flex items-center justify-center p-6 border-b border-gray-100">
+      <div className="relative h-60 bg-slate-50/70 flex flex-col justify-end p-4 pt-12 border-b border-gray-100/80 overflow-hidden">
         
         {/* Badges */}
-        {product.badge && (
-          <span className="absolute top-4 left-4 z-10 px-2.5 py-1 bg-amber-500 text-white text-[11px] uppercase tracking-wider font-bold rounded shadow-sm">
-            {product.badge}
+        <div className="absolute top-3.5 inset-x-3.5 z-10 flex items-center justify-between gap-2 pointer-events-none">
+          {product.badge ? (
+            <span className="px-2.5 py-1 bg-amber-500 text-white text-[10px] sm:text-[11px] uppercase tracking-wider font-bold rounded-md shadow-xs flex-shrink-0">
+              {product.badge}
+            </span>
+          ) : <div />}
+          
+          <span className="px-2 py-1 bg-[#06315B]/10 text-[#06315B] text-[11px] font-bold rounded-md backdrop-blur-xs flex-shrink-0">
+            {categoryLabels[product.category]}
           </span>
-        )}
-        <div className="absolute top-4 right-4 z-10 px-2 py-1 bg-[#06315B]/10 text-[#06315B] text-xs font-semibold rounded">
-          {categoryLabels[product.category]}
         </div>
 
         {/* Product Image */}
-        <div className="relative w-full h-full">
+        <div className="relative w-full h-44 mt-auto">
           <Image
             src={product.image}
             alt={product.name}
             fill
-            className="object-contain group-hover:scale-105 transition-transform duration-500"
+            className="object-contain object-center group-hover:scale-105 transition-transform duration-500"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
         </div>

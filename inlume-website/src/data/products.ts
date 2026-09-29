@@ -181,19 +181,70 @@ export const products: Product[] = [
 
   // ─── LED High Way Light ───
   {
-    id: 'hb-1',
-    name: '150W LED High Way Light',
+    id: 'hw-100w',
+    name: '100W LED High-Way Light',
+    category: 'high-way-light',
+    wattage: 100,
+    voltage: '220V AC',
+    lumens: '140–170 lm/W',
+    colorTemp: '5500K–6500K',
+    body: 'Aluminium Body with Fiber Frame',
+    ipRating: 'IP66',
+    warranty: '2 Years',
+    features: [
+      'Inbuilt 6KVA Surge Driver',
+      'Lance Model DOB Technology',
+      'High-Strength Fiber Frame',
+      'Color Temp: 5500K to 6500K',
+      'IP66 Weatherproof Aluminum Body',
+      'Heavy Highway & Outdoor Fixture',
+    ],
+    image: '/images/products/hw-100w.jpeg',
+    badge: '100W High Way',
+  },
+  {
+    id: 'hw-150w',
+    name: '150W LED High-Way Light',
     category: 'high-way-light',
     wattage: 150,
     voltage: '220V AC',
     lumens: '140–170 lm/W',
     colorTemp: '5500K–6500K',
-    body: 'Aluminium',
+    body: 'Aluminium Body with Fiber Frame',
     ipRating: 'IP66',
     warranty: '2 Years',
-    features: ['UFO Round Design', 'For Highways & Heavy Outdoor', 'High Lumen Efficacy', 'Industrial Grade'],
-    image: '/images/products/hibay-light-150w.png',
-    badge: 'High Way',
+    features: [
+      'Inbuilt 6KVA Surge Driver',
+      'Lance Model DOB Technology',
+      'High-Strength Fiber Frame',
+      'Color Temp: 5500K to 6500K',
+      'IP66 Weatherproof Aluminum Body',
+      'Heavy Highway & Outdoor Fixture',
+    ],
+    image: '/images/products/hw-150w.jpeg',
+    badge: '150W High Way',
+  },
+  {
+    id: 'hw-200w',
+    name: '200W LED High-Way Light',
+    category: 'high-way-light',
+    wattage: 200,
+    voltage: '220V AC',
+    lumens: '140–170 lm/W',
+    colorTemp: '5500K–6500K',
+    body: 'Aluminium Body with Fiber Frame',
+    ipRating: 'IP66',
+    warranty: '2 Years',
+    features: [
+      'Inbuilt 6KVA Surge Driver',
+      'Lance Model DOB Technology',
+      'High-Strength Fiber Frame',
+      'Color Temp: 5500K to 6500K',
+      'IP66 Weatherproof Aluminum Body',
+      'Heavy Highway & Outdoor Fixture',
+    ],
+    image: '/images/products/hw-200w.jpeg',
+    badge: '200W High Way',
   },
 ];
 
@@ -216,11 +267,11 @@ export const categories: Category[] = [
     id: 'high-way-light',
     name: 'High Way Lighting',
     description: 'Powerful High Way LED luminaires designed for expressways, main roads, and heavy outdoor spaces.',
-    image: '/images/products/hibay-light-150w.png',
-    productCount: 1,
+    image: '/images/products/hw-150w.jpeg',
+    productCount: 3,
   },
 ];
 
 export const featuredProducts = products.filter((p) =>
-  ['sl-24w', 'sl-100w', 'hb-1', 'rgb-50w', 'wgl-1', 'dob-100w'].includes(p.id)
+  ['sl-24w', 'sl-100w', 'hw-150w', 'hw-200w', 'rgb-50w', 'wgl-1', 'dob-100w'].includes(p.id)
 );

@@ -4,7 +4,10 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { FaWhatsapp } from 'react-icons/fa';
+import { FaWhatsapp, FaLinkedin, FaInstagram } from 'react-icons/fa';
+
+const LINKEDIN_URL = "https://www.linkedin.com/posts/inlume-innovations_inlumeinnovations-lightingsolutions-ledlighting-activity-7510363099531624448-hkMP?utm_source=share&utm_medium=member_android&rcm=ACoAAEDhAb8BILPx0z-nKES7eMAIV9Uvg_qVfks";
+const INSTAGRAM_URL = "https://www.instagram.com/inlumeinnovations?stkn=azkyMmJhcTB5YzZj";
 import {
   ShieldCheck,
   Zap,
@@ -59,10 +62,10 @@ const values = [
 ];
 
 const milestones = [
-  { year: '2018', title: 'Company Established', desc: 'Started with a vision to deliver robust commercial LED solutions across North India.' },
-  { year: '2020', title: 'Industrial Expansion', desc: 'Launched high-power DOB flood lights and UFO high bay range for factories and warehouses.' },
-  { year: '2022', title: 'IP66 Full Certification', desc: 'Achieved full IP66 weatherproofing and 6KV surge protection standards for all outdoor lines.' },
-  { year: '2024', title: 'Smart RGB & Highway Range', desc: 'Introduced smart remote RGB flood lights and heavy highway street lighting fixtures.' },
+  { year: '2025', title: 'Company Established', desc: 'Founded Inlume Innovations with a vision to deliver robust, high-performance commercial and industrial LED lighting solutions.' },
+  { year: '2025', title: 'Core Product Line Launch', desc: 'Rolled out heavy-duty IP66 flood lights, UFO high bays, street lights, and smart RGB architectural fixtures.' },
+  { year: '2026', title: 'Pan-India Distribution Expansion', desc: 'Expanded direct-factory distribution network to serve commercial enterprises, municipal projects, and industrial plants nationwide.' },
+  { year: '2026+', title: 'Smart & Sustainable Lighting', desc: 'Pioneering smart IoT lighting controls and energy-conserving solar LED solutions for modern infrastructure.' },
 ];
 
 export default function AboutClient() {
@@ -170,6 +173,7 @@ export default function AboutClient() {
                   src="/images/street-light-bg.jpg"
                   alt="Inlume Commercial Architectural LED Lighting Project"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   priority
                 />
@@ -244,7 +248,7 @@ export default function AboutClient() {
           <div className="space-y-6">
             {milestones.map((m, idx) => (
               <motion.div
-                key={m.year}
+                key={m.title}
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -282,6 +286,24 @@ export default function AboutClient() {
             >
               Explore Products
             </Link>
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#0A66C2] hover:bg-[#084e96] text-white font-bold text-sm rounded-xl transition-all duration-300 shadow-xl hover:scale-105"
+            >
+              <FaLinkedin className="w-4 h-4 text-white" />
+              Follow on LinkedIn
+            </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] hover:opacity-90 text-white font-bold text-sm rounded-xl transition-all duration-300 shadow-xl hover:scale-105"
+            >
+              <FaInstagram className="w-4 h-4 text-white" />
+              Follow on Instagram
+            </a>
             <a
               href="https://wa.me/918368690828?text=Hi%20Inlume%20Innovations%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20a%20custom%20LED%20lighting%20project."
               target="_blank"

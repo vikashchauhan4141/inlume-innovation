@@ -1,5 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { FaLinkedin, FaWhatsapp, FaInstagram } from 'react-icons/fa';
+
+const LINKEDIN_URL = "https://www.linkedin.com/posts/inlume-innovations_inlumeinnovations-lightingsolutions-ledlighting-activity-7510363099531624448-hkMP?utm_source=share&utm_medium=member_android&rcm=ACoAAEDhAb8BILPx0z-nKES7eMAIV9Uvg_qVfks";
+const INSTAGRAM_URL = "https://www.instagram.com/inlumeinnovations?stkn=azkyMmJhcTB5YzZj";
 
 const footerLinks = {
   company: [
@@ -7,6 +11,7 @@ const footerLinks = {
     { label: 'About Us', href: '/about' },
     { label: 'Our Products', href: '/products' },
     { label: 'Contact Us', href: '/contact' },
+    { label: 'Download Brochure (PDF)', href: '/docs/Inlume-Innovations-Brochure.pdf', isDownload: true },
   ],
   products: [
     { label: 'LED Street Lights', href: '/products?category=street-light' },
@@ -32,13 +37,49 @@ export default function Footer() {
                   alt="Inlume Innovations Logo"
                   width={160}
                   height={42}
-                  className="object-contain max-h-full"
+                  className="object-contain max-h-full w-auto h-auto"
+                  style={{ width: 'auto', height: 'auto' }}
                 />
               </div>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Delivering premium LED lighting solutions that illuminate every space with efficiency, durability, and innovation.
             </p>
+
+            {/* Social Links */}
+            <div className="flex items-center gap-3 mb-6">
+              <a
+                href={LINKEDIN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Inlume Innovations LinkedIn Page"
+                className="w-10 h-10 rounded-xl bg-[#0A66C2]/15 border border-[#0A66C2]/30 flex items-center justify-center text-[#0A66C2] hover:bg-[#0A66C2] hover:text-white transition-all duration-300 shadow-xs group"
+                title="Connect on LinkedIn"
+              >
+                <FaLinkedin className="w-5 h-5 transition-transform group-hover:scale-110" />
+              </a>
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Inlume Innovations Instagram Page"
+                className="w-10 h-10 rounded-xl bg-[#E4405F]/15 border border-[#E4405F]/30 flex items-center justify-center text-[#E4405F] hover:bg-[#E4405F] hover:text-white transition-all duration-300 shadow-xs group"
+                title="Follow on Instagram"
+              >
+                <FaInstagram className="w-5 h-5 transition-transform group-hover:scale-110" />
+              </a>
+              <a
+                href="https://wa.me/918368690828?text=Hi%20Inlume%20Innovations%2C%20I%20would%20like%20to%20get%20more%20information."
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Inlume Innovations WhatsApp"
+                className="w-10 h-10 rounded-xl bg-[#25D366]/15 border border-[#25D366]/30 flex items-center justify-center text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all duration-300 shadow-xs group"
+                title="Chat on WhatsApp"
+              >
+                <FaWhatsapp className="w-5 h-5 transition-transform group-hover:scale-110" />
+              </a>
+            </div>
+
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
               <span className="text-sm text-gray-400">2 Year Warranty on all products</span>
@@ -51,13 +92,26 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover:text-amber-400 text-sm transition-colors duration-200 flex items-center gap-2 group"
-                  >
-                    <span className="w-1.5 h-1.5 bg-amber-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {link.label}
-                  </Link>
+                  {link.isDownload ? (
+                    <a
+                      href={link.href}
+                      download="Inlume-Innovations-Brochure.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-amber-400 hover:text-amber-300 text-sm font-semibold transition-colors duration-200 flex items-center gap-2 group"
+                    >
+                      <span className="w-1.5 h-1.5 bg-amber-400 rounded-full" />
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-amber-400 text-sm transition-colors duration-200 flex items-center gap-2 group"
+                    >
+                      <span className="w-1.5 h-1.5 bg-amber-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -88,6 +142,25 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <div className="w-8 h-8 bg-amber-500/10 border border-amber-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
                   <svg className="w-4 h-4 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs text-gray-500 mb-0.5">Address</p>
+                  <a
+                    href="https://www.google.com/maps?q=28.4909008,77.5096278"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-amber-400 text-sm transition-colors block leading-snug"
+                  >
+                    Gamma II, Greater Noida, UP 201310
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-8 h-8 bg-amber-500/10 border border-amber-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg className="w-4 h-4 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
@@ -108,6 +181,38 @@ export default function Footer() {
                   <p className="text-xs text-gray-500 mb-0.5">Phone</p>
                   <a href="tel:+918368690828" className="text-gray-300 hover:text-amber-400 text-sm transition-colors">
                     +91 8368690828
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-8 h-8 bg-[#0A66C2]/15 border border-[#0A66C2]/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <FaLinkedin className="w-4 h-4 text-[#0A66C2]" />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-500 mb-0.5">LinkedIn</p>
+                  <a
+                    href={LINKEDIN_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-[#0A66C2] text-sm transition-colors"
+                  >
+                    Inlume Innovations
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-8 h-8 bg-[#E4405F]/15 border border-[#E4405F]/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <FaInstagram className="w-4 h-4 text-[#E4405F]" />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-500 mb-0.5">Instagram</p>
+                  <a
+                    href={INSTAGRAM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-[#E4405F] text-sm transition-colors"
+                  >
+                    @inlumeinnovations
                   </a>
                 </div>
               </li>

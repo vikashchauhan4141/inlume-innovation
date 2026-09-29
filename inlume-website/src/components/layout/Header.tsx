@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
+import { FaWhatsapp, FaPhoneAlt, FaFileDownload } from 'react-icons/fa';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -66,6 +66,17 @@ export default function Header() {
           {/* Action Buttons */}
           <div className="hidden md:flex items-center gap-3">
             <a
+              href="/docs/Inlume-Innovations-Brochure.pdf"
+              download="Inlume-Innovations-Brochure.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs sm:text-sm rounded-lg transition-all duration-300 shadow-xs hover:shadow-amber-500/20"
+              title="Download Inlume Innovations Product Brochure PDF"
+            >
+              <FaFileDownload className="w-3.5 h-3.5 text-slate-950" />
+              Brochure
+            </a>
+            <a
               href="tel:+918368690828"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#06315B] hover:bg-[#0a4f8a] text-white font-semibold text-sm rounded-lg transition-all duration-300 shadow-xs hover:shadow-blue-900/20"
             >
@@ -110,6 +121,16 @@ export default function Header() {
               </Link>
             ))}
             <div className="pt-2 space-y-2">
+              <a
+                href="/docs/Inlume-Innovations-Brochure.pdf"
+                download="Inlume-Innovations-Brochure.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 w-full px-5 py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-xl transition-colors shadow-xs"
+              >
+                <FaFileDownload className="w-4 h-4 text-slate-950" />
+                Download Brochure (PDF)
+              </a>
               <a
                 href="https://wa.me/918368690828?text=Hi%20Inlume%20Innovations%2C%20I%20would%20like%20to%20inquire%20about%20your%20LED%20lighting%20products."
                 target="_blank"
