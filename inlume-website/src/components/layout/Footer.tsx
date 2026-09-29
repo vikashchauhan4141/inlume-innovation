@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaLinkedin, FaWhatsapp, FaInstagram } from 'react-icons/fa';
-
-const LINKEDIN_URL = "https://www.linkedin.com/posts/inlume-innovations_inlumeinnovations-lightingsolutions-ledlighting-activity-7510363099531624448-hkMP?utm_source=share&utm_medium=member_android&rcm=ACoAAEDhAb8BILPx0z-nKES7eMAIV9Uvg_qVfks";
-const INSTAGRAM_URL = "https://www.instagram.com/inlumeinnovations?stkn=azkyMmJhcTB5YzZj";
+import { siteConfig } from '@/config/site';
 
 const footerLinks = {
   company: [
@@ -49,7 +47,7 @@ export default function Footer() {
             {/* Social Links */}
             <div className="flex items-center gap-3 mb-6">
               <a
-                href={LINKEDIN_URL}
+                href={siteConfig.links.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Inlume Innovations LinkedIn Page"
@@ -59,7 +57,7 @@ export default function Footer() {
                 <FaLinkedin className="w-5 h-5 transition-transform group-hover:scale-110" />
               </a>
               <a
-                href={INSTAGRAM_URL}
+                href={siteConfig.links.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Inlume Innovations Instagram Page"
@@ -69,7 +67,7 @@ export default function Footer() {
                 <FaInstagram className="w-5 h-5 transition-transform group-hover:scale-110" />
               </a>
               <a
-                href="https://wa.me/918368690828?text=Hi%20Inlume%20Innovations%2C%20I%20would%20like%20to%20get%20more%20information."
+                href={`${siteConfig.links.whatsappBase}?text=Hi%20Inlume%20Innovations%2C%20I%20would%20like%20to%20get%20more%20information.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Inlume Innovations WhatsApp"
@@ -149,12 +147,12 @@ export default function Footer() {
                 <div>
                   <p className="text-xs text-gray-500 mb-0.5">Address</p>
                   <a
-                    href="https://www.google.com/maps?q=28.4909008,77.5096278"
+                    href={siteConfig.mapUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-300 hover:text-amber-400 text-sm transition-colors block leading-snug"
                   >
-                    Gamma II, Greater Noida, UP 201310
+                    {siteConfig.addressShort}
                   </a>
                 </div>
               </li>
@@ -166,8 +164,8 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 mb-0.5">Email</p>
-                  <a href="mailto:inlumeinnovations@gmail.com" className="text-gray-300 hover:text-amber-400 text-sm transition-colors">
-                    inlumeinnovations@gmail.com
+                  <a href={`mailto:${siteConfig.email}`} className="text-gray-300 hover:text-amber-400 text-sm transition-colors">
+                    {siteConfig.email}
                   </a>
                 </div>
               </li>
@@ -179,8 +177,8 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 mb-0.5">Phone</p>
-                  <a href="tel:+918368690828" className="text-gray-300 hover:text-amber-400 text-sm transition-colors">
-                    +91 8368690828
+                  <a href={`tel:${siteConfig.phone}`} className="text-gray-300 hover:text-amber-400 text-sm transition-colors">
+                    {siteConfig.phone}
                   </a>
                 </div>
               </li>
@@ -191,12 +189,12 @@ export default function Footer() {
                 <div>
                   <p className="text-xs text-gray-500 mb-0.5">LinkedIn</p>
                   <a
-                    href={LINKEDIN_URL}
+                    href={siteConfig.links.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-300 hover:text-[#0A66C2] text-sm transition-colors"
                   >
-                    Inlume Innovations
+                    {siteConfig.name}
                   </a>
                 </div>
               </li>
@@ -207,7 +205,7 @@ export default function Footer() {
                 <div>
                   <p className="text-xs text-gray-500 mb-0.5">Instagram</p>
                   <a
-                    href={INSTAGRAM_URL}
+                    href={siteConfig.links.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-300 hover:text-[#E4405F] text-sm transition-colors"
@@ -224,7 +222,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 mb-0.5">GST No.</p>
-                  <span className="text-gray-300 text-sm">09CXKPD4992D1Z8</span>
+                  <span className="text-gray-300 text-sm">{siteConfig.businessDetails.gstNo}</span>
                 </div>
               </li>
             </ul>

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { FaWhatsapp, FaPhoneAlt, FaFileDownload } from 'react-icons/fa';
+import { siteConfig } from '@/config/site';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -77,11 +78,11 @@ export default function Header() {
               Brochure
             </a>
             <a
-              href="tel:+918368690828"
+              href={`tel:${siteConfig.phone}`}
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#06315B] hover:bg-[#0a4f8a] text-white font-semibold text-sm rounded-lg transition-all duration-300 shadow-xs hover:shadow-blue-900/20"
             >
               <FaPhoneAlt className="w-3.5 h-3.5 text-amber-400" />
-              Call +91 8368690828
+              Call {siteConfig.phone}
             </a>
           </div>
 
@@ -132,7 +133,7 @@ export default function Header() {
                 Download Brochure (PDF)
               </a>
               <a
-                href="https://wa.me/918368690828?text=Hi%20Inlume%20Innovations%2C%20I%20would%20like%20to%20inquire%20about%20your%20LED%20lighting%20products."
+                href={`${siteConfig.links.whatsappBase}?text=Hi%20Inlume%20Innovations%2C%20I%20would%20like%20to%20inquire%20about%20your%20LED%20lighting%20products.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full px-5 py-3 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold rounded-xl transition-colors"
@@ -141,11 +142,11 @@ export default function Header() {
                 Chat on WhatsApp
               </a>
               <a
-                href="tel:+918368690828"
+                href={`tel:${siteConfig.phone}`}
                 className="flex items-center justify-center gap-2 w-full px-5 py-3 bg-[#06315B] hover:bg-[#0a4f8a] text-white font-semibold rounded-xl transition-colors"
               >
                 <FaPhoneAlt className="w-4 h-4 text-amber-400" />
-                Call +91 8368690828
+                Call {siteConfig.phone}
               </a>
             </div>
           </div>

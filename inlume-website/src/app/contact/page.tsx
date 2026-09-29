@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { FaLinkedin, FaInstagram } from 'react-icons/fa';
-
-const LINKEDIN_URL = "https://www.linkedin.com/posts/inlume-innovations_inlumeinnovations-lightingsolutions-ledlighting-activity-7510363099531624448-hkMP?utm_source=share&utm_medium=member_android&rcm=ACoAAEDhAb8BILPx0z-nKES7eMAIV9Uvg_qVfks";
-const INSTAGRAM_URL = "https://www.instagram.com/inlumeinnovations?stkn=azkyMmJhcTB5YzZj";
+import { FaLinkedin, FaInstagram, FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
+import { siteConfig } from '@/config/site';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
@@ -45,51 +43,38 @@ export default function ContactPage() {
               <div className="space-y-6 mb-10">
                 {[
                   {
-                    icon: (
-                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                    ),
+                    icon: <FaMapMarkerAlt className="w-5 h-5" />,
                     label: 'Address',
-                    value: 'Gamma II, Greater Noida, Uttar Pradesh 201310',
-                    href: 'https://www.google.com/maps?q=28.4909008,77.5096278',
+                    value: siteConfig.address,
+                    href: siteConfig.mapUrl,
                     isExternal: true,
                   },
                   {
-                    icon: (
-                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    ),
+                    icon: <FaEnvelope className="w-5 h-5" />,
                     label: 'Email',
-                    value: 'inlumeinnovations@gmail.com',
-                    href: 'mailto:inlumeinnovations@gmail.com',
+                    value: siteConfig.email,
+                    href: `mailto:${siteConfig.email}`,
                     isExternal: false,
                   },
                   {
-                    icon: (
-                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
-                    ),
+                    icon: <FaPhoneAlt className="w-5 h-5" />,
                     label: 'Phone',
-                    value: '+91 8368690828',
-                    href: 'tel:+918368690828',
+                    value: siteConfig.phone,
+                    href: `tel:${siteConfig.phone}`,
                     isExternal: false,
                   },
                   {
                     icon: <FaLinkedin className="w-5 h-5 text-[#0A66C2]" />,
                     label: 'LinkedIn',
-                    value: 'Inlume Innovations',
-                    href: LINKEDIN_URL,
+                    value: siteConfig.name,
+                    href: siteConfig.links.linkedin,
                     isExternal: true,
                   },
                   {
                     icon: <FaInstagram className="w-5 h-5 text-[#E4405F]" />,
                     label: 'Instagram',
                     value: '@inlumeinnovations',
-                    href: INSTAGRAM_URL,
+                    href: siteConfig.links.instagram,
                     isExternal: true,
                   },
                 ].map((item) => (
@@ -115,8 +100,8 @@ export default function ContactPage() {
               <div className="bg-[#06315B]/5 rounded-2xl p-6 border border-[#06315B]/10">
                 <h3 className="font-bold text-[#06315B] mb-3">Business Details</h3>
                 <div className="space-y-2 text-sm text-gray-600">
-                  <p><span className="font-medium text-[#06315B]">GST No:</span> 09CXKPD4992D1Z8</p>
-                  <p><span className="font-medium text-[#06315B]">Warranty:</span> 2 Years on all products</p>
+                  <p><span className="font-medium text-[#06315B]">GST No:</span> {siteConfig.businessDetails.gstNo}</p>
+                  <p><span className="font-medium text-[#06315B]">Warranty:</span> {siteConfig.businessDetails.warranty} on all products</p>
                   <p><span className="font-medium text-[#06315B]">Shipping:</span> Transportation charges extra</p>
                 </div>
               </div>
@@ -131,11 +116,11 @@ export default function ContactPage() {
                   <Link href="/about" className="px-3 py-1.5 bg-white border border-gray-200 text-[#06315B] text-xs font-medium rounded-lg hover:bg-[#06315B] hover:text-white hover:border-[#06315B] transition-colors">
                     About Us
                   </Link>
-                  <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#0A66C2]/10 border border-[#0A66C2]/30 text-[#0A66C2] text-xs font-semibold rounded-lg hover:bg-[#0A66C2] hover:text-white transition-colors">
+                  <a href={siteConfig.links.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#0A66C2]/10 border border-[#0A66C2]/30 text-[#0A66C2] text-xs font-semibold rounded-lg hover:bg-[#0A66C2] hover:text-white transition-colors">
                     <FaLinkedin className="w-3.5 h-3.5" />
                     LinkedIn
                   </a>
-                  <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#E4405F]/10 border border-[#E4405F]/30 text-[#E4405F] text-xs font-semibold rounded-lg hover:bg-[#E4405F] hover:text-white transition-colors">
+                  <a href={siteConfig.links.instagram} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#E4405F]/10 border border-[#E4405F]/30 text-[#E4405F] text-xs font-semibold rounded-lg hover:bg-[#E4405F] hover:text-white transition-colors">
                     <FaInstagram className="w-3.5 h-3.5" />
                     Instagram
                   </a>
@@ -150,12 +135,12 @@ export default function ContactPage() {
                   <div>
                     <h2 className="text-2xl font-bold text-[#06315B]">Our Office Location</h2>
                     <p className="text-gray-500 text-xs sm:text-sm">
-                      Gamma II, Greater Noida, Uttar Pradesh 201310
+                      {siteConfig.address}
                     </p>
                   </div>
                   <div className="flex flex-wrap items-center gap-2">
                     <a
-                      href="https://www.google.com/maps?q=28.4909008,77.5096278"
+                      href={siteConfig.mapUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold rounded-xl transition-colors whitespace-nowrap shadow-xs"
@@ -163,10 +148,10 @@ export default function ContactPage() {
                       Open in Maps
                     </a>
                     <a
-                      href="tel:+918368690828"
+                      href={`tel:${siteConfig.phone}`}
                       className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#06315B] text-white text-xs font-bold rounded-xl hover:bg-[#0a4f8a] transition-colors whitespace-nowrap shadow-xs"
                     >
-                      Call +91 8368690828
+                      Call {siteConfig.phone}
                     </a>
                   </div>
                 </div>
