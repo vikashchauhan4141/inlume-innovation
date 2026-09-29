@@ -273,5 +273,5 @@ export const categories: Category[] = [
 ];
 
 export const featuredProducts = products.filter((p) =>
-  ['sl-24w', 'sl-100w', 'hw-150w', 'hw-200w', 'rgb-50w', 'wgl-1', 'dob-100w'].includes(p.id)
+  ['sl-24w', 'sl-100w', 'hw-150w', 'rgb-50w', 'wgl-1', 'dob-100w'].includes(p.id)
 );

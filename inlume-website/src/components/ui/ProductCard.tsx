@@ -5,7 +5,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Product } from '@/types';
 import { siteConfig } from '@/config/site';
-import { FaCheck, FaShieldAlt, FaWhatsapp, FaSearchPlus } from 'react-icons/fa';
+import { FaCheck, FaWhatsapp, FaSearchPlus } from 'react-icons/fa';
+import { ShieldCheck } from 'lucide-react';
 import ImageModal from './ImageModal';
 
 interface ProductCardProps {
@@ -100,7 +101,7 @@ export default function ProductCard({ product, showDetails = false }: ProductCar
 
         <div className="mt-auto pt-3 border-t border-gray-100 flex items-center justify-between">
           <span className="text-xs text-gray-500 flex items-center gap-1">
-            <FaShieldAlt className="w-3.5 h-3.5 text-green-500" />
+            <ShieldCheck className="w-4 h-4 text-emerald-500" />
             {product.warranty ?? '2 Years'} Warranty
           </span>
           <a

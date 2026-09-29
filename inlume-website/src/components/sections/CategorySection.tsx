@@ -22,7 +22,7 @@ const categoryDataMap: Record<string, { appBg: string; fixture: string; altApp: 
 
 export default function CategorySection() {
   return (
-    <section className="py-14 sm:py-20 bg-slate-50/50" id="categories">
+    <section className="py-14 sm:py-20 bg-slate-100" id="categories">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}

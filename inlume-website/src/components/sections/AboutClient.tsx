@@ -201,7 +201,7 @@ export default function AboutClient() {
       </section>
 
       {/* Engineering Values Section */}
-      <section className="py-16 sm:py-20 bg-slate-50 border-y border-slate-200/80">
+      <section className="py-16 sm:py-20 bg-slate-100 border-y border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-2xl sm:text-4xl font-extrabold text-[#06315B]">

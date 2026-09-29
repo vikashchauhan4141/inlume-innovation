@@ -32,6 +32,27 @@ export default function FeaturedProductsSection() {
           ))}
         </div>
 
+        {/* View More Indicator */}
+        <div className="mt-12 flex flex-col items-center justify-center text-center">
+          <div className="flex items-center justify-center gap-1.5 mb-4 opacity-60">
+            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" style={{ animationDelay: '200ms' }}></span>
+            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" style={{ animationDelay: '400ms' }}></span>
+          </div>
+          <p className="text-gray-500 font-medium mb-5">
+            A glimpse of our collection. Discover our complete range of LED lighting solutions.
+          </p>
+          <Link
+            href="/products"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+          >
+            Explore All Products
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </Link>
+        </div>
+
         {/* Bottom CTA Strip */}
         <div className="mt-14 rounded-3xl bg-gradient-to-r from-[#06315B] to-[#0a4f8a] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
