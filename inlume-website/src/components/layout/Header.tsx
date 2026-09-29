@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { FaWhatsapp, FaPhoneAlt, FaFileDownload } from 'react-icons/fa';
+import { FaWhatsapp, FaPhoneAlt, FaFileDownload, FaCheckCircle } from 'react-icons/fa';
 import { siteConfig } from '@/config/site';
 
 const navLinks = [
@@ -54,11 +54,10 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
-                  pathname === link.href
+                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${pathname === link.href
                     ? 'text-[#06315B]'
                     : 'text-gray-600 hover:text-[#06315B]'
-                }`}
+                  }`}
               >
                 {link.label}
               </Link>
@@ -66,7 +65,25 @@ export default function Header() {
           </nav>
 
           {/* Action Buttons */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-2 lg:gap-3">
+            {/* IndiaMart Badge (Desktop) - Authentic Design */}
+            <a
+              href={siteConfig.links.indiamart}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden lg:flex items-center gap-2 px-3 py-1.5 bg-white hover:bg-slate-50 border border-slate-200 rounded-lg transition-all shadow-sm group"
+              title="View our verified IndiaMart catalog"
+            >
+              <FaCheckCircle className="w-4 h-4 text-green-500 group-hover:scale-110 transition-transform" />
+              <div className="flex flex-col">
+                <span className="text-[8px] font-bold text-gray-500 leading-none uppercase tracking-wider mb-0.5">Verified Supplier</span>
+                <div className="flex items-center font-black text-[13px] leading-none">
+                  <span className="text-[#E31E24] italic">india</span>
+                  <span className="text-[#012F6C] italic">mart</span>
+                </div>
+              </div>
+            </a>
+
             <a
               href="/docs/Inlume-Innovations-Brochure.pdf"
               download="Inlume-Innovations-Brochure.pdf"
@@ -87,21 +104,39 @@ export default function Header() {
             </a>
           </div>
 
-          {/* Mobile Hamburger */}
-          <button
-            id="mobile-menu-button"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
-            aria-label="Toggle navigation menu"
-          >
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              {isMobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
+          {/* Mobile Actions (IndiaMart + Hamburger) */}
+          <div className="flex md:hidden items-center gap-2">
+            <a
+              href={siteConfig.links.indiamart}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 px-2.5 py-1.5 bg-slate-50 border border-slate-200 rounded-lg shadow-xs active:bg-slate-100 transition-colors"
+              title="Verified on IndiaMart"
+            >
+              <FaCheckCircle className="w-3 h-3 text-green-500" />
+              <div className="flex flex-col">
+                <div className="flex items-center font-black text-[11px] leading-none">
+                  <span className="text-[#E31E24] italic">india</span>
+                  <span className="text-[#012F6C] italic">mart</span>
+                </div>
+              </div>
+            </a>
+
+            <button
+              id="mobile-menu-button"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+              aria-label="Toggle navigation menu"
+            >
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                {isMobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -113,11 +148,10 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
-                  pathname === link.href
+                className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${pathname === link.href
                     ? 'text-[#06315B] bg-blue-50'
                     : 'text-gray-700 hover:text-[#06315B] hover:bg-gray-50'
-                }`}
+                  }`}
               >
                 {link.label}
               </Link>

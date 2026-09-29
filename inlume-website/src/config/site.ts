@@ -9,6 +9,7 @@ export const siteConfig = {
   mapUrl: "https://www.google.com/maps?q=28.4909008,77.5096278",
   links: {
     whatsappBase: "https://wa.me/918368690828",
+    indiamart: "https://www.indiamart.com/inlume-innovations/",
     linkedin: "https://www.linkedin.com/posts/inlume-innovations_inlumeinnovations-lightingsolutions-ledlighting-activity-7510363099531624448-hkMP?utm_source=share&utm_medium=member_android&rcm=ACoAAEDhAb8BILPx0z-nKES7eMAIV9Uvg_qVfks",
     instagram: "https://www.instagram.com/inlumeinnovations?stkn=azkyMmJhcTB5YzZj",
   },
