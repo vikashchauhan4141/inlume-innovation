@@ -4,6 +4,7 @@ import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import FloatingWhatsApp from '@/components/ui/FloatingWhatsApp';
+import { siteConfig } from '@/config/site';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -18,6 +19,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.inlumeinnovations.com'),
   title: {
     default: 'Inlume Innovations | Premium LED Lighting Solutions',
     template: '%s | Inlume Innovations',
@@ -51,8 +53,31 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": siteConfig.name,
+    "url": "https://www.inlumeinnovations.com",
+    "logo": "https://www.inlumeinnovations.com/logo-transparent.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": siteConfig.phone,
+      "contactType": "customer service"
+    },
+    "sameAs": [
+      siteConfig.links.linkedin,
+      siteConfig.links.instagram
+    ]
+  };
+
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable}`} data-scroll-behavior="smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body className="font-inter antialiased bg-white text-gray-900">
         <Header />
         <main>{children}</main>

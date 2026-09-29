@@ -1,8 +1,12 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Product } from '@/types';
 import { siteConfig } from '@/config/site';
-import { FaCheck, FaShieldAlt, FaWhatsapp } from 'react-icons/fa';
+import { FaCheck, FaShieldAlt, FaWhatsapp, FaSearchPlus } from 'react-icons/fa';
+import ImageModal from './ImageModal';
 
 interface ProductCardProps {
   product: Product;
@@ -19,12 +23,24 @@ const categoryLabels: Record<string, string> = {
 };
 
 export default function ProductCard({ product, showDetails = false }: ProductCardProps) {
+  const [isImageModalOpen, setIsImageModalOpen] = useState(false);
+
   return (
     <div className="product-card group bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-amber-500/30 transition-all duration-300 flex flex-col">
 
       {/* ── Image Area ── */}
-      <div className="relative h-60 bg-slate-50/70 flex flex-col justify-end p-4 pt-12 border-b border-gray-100/80 overflow-hidden">
-        
+      <div 
+        className="relative h-60 bg-slate-50/70 flex flex-col justify-end p-4 pt-12 border-b border-gray-100/80 overflow-hidden cursor-zoom-in group/image"
+        onClick={() => setIsImageModalOpen(true)}
+        title="Click to view full image"
+      >
+        {/* Overlay Icon on hover */}
+        <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/5 transition-colors z-20 flex items-center justify-center opacity-0 group-hover/image:opacity-100">
+          <div className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center text-[#06315B] transform scale-75 group-hover/image:scale-100 transition-all duration-300">
+            <FaSearchPlus className="w-5 h-5" />
+          </div>
+        </div>
+
         {/* Badges */}
         <div className="absolute top-3.5 inset-x-3.5 z-10 flex items-center justify-between gap-2 pointer-events-none">
           {product.badge ? (
@@ -98,6 +114,14 @@ export default function ProductCard({ product, showDetails = false }: ProductCar
           </a>
         </div>
       </div>
+
+      {/* ── Image Modal ── */}
+      <ImageModal 
+        isOpen={isImageModalOpen} 
+        onClose={() => setIsImageModalOpen(false)} 
+        imageSrc={product.image} 
+        altText={product.name} 
+      />
     </div>
   );
 }
