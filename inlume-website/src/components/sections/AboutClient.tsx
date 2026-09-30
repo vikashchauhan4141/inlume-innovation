@@ -156,6 +156,15 @@ export default function AboutClient() {
                   <Award className="w-4 h-4 text-amber-600" />
                   <span className="font-semibold">IP66 Weatherproof Certified</span>
                 </div>
+                <a 
+                  href="https://www.indiamart.com/inlume-innovations/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3.5 py-2 bg-green-50 text-green-800 border border-green-200 rounded-xl hover:bg-green-100 transition-colors shadow-sm"
+                >
+                  <ShieldCheck className="w-4 h-4 text-green-600" />
+                  <span><strong className="text-green-700">Verified Supplier on</strong> <span className="text-[#E31E24] italic font-black text-sm">india</span><span className="text-[#012F6C] italic font-black text-sm">mart</span></span>
+                </a>
               </div>
             </motion.div>
 

@@ -20,12 +20,15 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.inlumeinnovations.com'),
+  alternates: {
+    canonical: 'https://www.inlumeinnovations.com',
+  },
   title: {
-    default: 'Inlume Innovations | Premium LED Lighting Solutions',
+    default: 'Inlume Innovations | Industrial & Commercial LED Lighting Manufacturer',
     template: '%s | Inlume Innovations',
   },
   description:
-    'Inlume Innovations delivers high-quality, energy-efficient LED lighting solutions for residential, commercial and industrial spaces. Street lights, flood lights, high bay lights and more.',
+    'Inlume Innovations manufactures premium, energy-efficient industrial & commercial LED lighting. Explore our IP66 street, flood, and high-bay lights today.',
   keywords: [
     'LED lighting',
     'street light',
@@ -55,14 +58,19 @@ export default function RootLayout({
 }>) {
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "LocalBusiness",
     "name": siteConfig.name,
     "url": "https://www.inlumeinnovations.com",
     "logo": "https://www.inlumeinnovations.com/logo-transparent.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": siteConfig.phone,
-      "contactType": "customer service"
+    "telephone": "+91-8368690828",
+    "email": "info@inlumeinnovations.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Gamma II",
+      "addressLocality": "Greater Noida",
+      "addressRegion": "Uttar Pradesh",
+      "postalCode": "201310",
+      "addressCountry": "IN"
     },
     "sameAs": [
       siteConfig.links.linkedin,

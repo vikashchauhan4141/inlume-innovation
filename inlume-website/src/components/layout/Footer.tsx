@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaLinkedin, FaWhatsapp, FaInstagram } from 'react-icons/fa';
+import { ShieldCheck } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 
 const footerLinks = {
@@ -79,9 +80,11 @@ export default function Footer() {
             </div>
 
 
-            <div className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span className="text-sm text-gray-400">2 Year Warranty on all products</span>
+            <div className="flex items-center gap-2 mt-2">
+              <ShieldCheck className="w-5 h-5 text-amber-400" />
+              <span className="text-sm font-semibold text-white">
+                2 Year Warranty <span className="text-gray-400 font-normal">on all products</span>
+              </span>
             </div>
           </div>
 
