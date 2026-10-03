@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: 'Contact Us',
   description:
     'Get in touch with Inlume Innovations for product enquiries, bulk orders, or custom LED lighting solutions. Email, phone, and contact form available.',
+  alternates: {
+    canonical: 'https://www.inlumeinnovations.com/contact',
+  },
 };
 
 export default function ContactPage() {

@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Products',
   description:
     'Browse our complete range of premium LED lighting products: street lights, flood lights, high bay lights, RGB lights and well glass lights.',
+  alternates: {
+    canonical: 'https://www.inlumeinnovations.com/products',
+  },
 };
 
 export default function ProductsPage() {
