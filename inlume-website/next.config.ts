@@ -22,6 +22,12 @@ const nextConfig: NextConfig = {
         destination: 'https://www.inlumeinnovations.com/:path*',
         permanent: true, // 301 redirect
       },
+      // Fix: old /our-products URL → new /products (Google had old URL indexed)
+      {
+        source: '/our-products',
+        destination: '/products',
+        permanent: true, // 301 - tells Google to update its index
+      },
       // Fix: remove trailing slashes to avoid duplicate content
       {
         source: '/:path+/',
