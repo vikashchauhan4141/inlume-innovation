@@ -17,9 +17,11 @@ import { siteConfig } from '@/config/site';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/products', label: 'Products' },
+  { href: '/catalogues', label: 'Catalogues' },
   { href: '/about', label: 'About Us' },
   { href: '/contact', label: 'Contact' },
 ];
+
 
 const catalogues = [
   {
@@ -182,7 +184,7 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                  className={`px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-200 whitespace-nowrap ${
                     pathname === link.href ? 'text-[#06315B]' : 'text-gray-600 hover:text-[#06315B]'
                   }`}
                 >

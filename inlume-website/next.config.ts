@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
   },
 
+
   // Fix: redirect non-www to www (fixes "Page with redirect" GSC issue)
   async redirects() {
     return [
@@ -40,6 +41,21 @@ const nextConfig: NextConfig = {
   // Fix: Security + SEO headers
   async headers() {
     return [
+      {
+        // Allow PDF files to be served without X-Frame-Options restriction
+        source: '/docs/:file*.pdf',
+        headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Content-Disposition', value: 'inline' },
+        ],
+      },
+      {
+        // Allow PDF worker to be fetched cross-context
+        source: '/pdf.worker.min.mjs',
+        headers: [
+          { key: 'Content-Type', value: 'application/javascript' },
+        ],
+      },
       {
         source: '/(.*)',
         headers: [
