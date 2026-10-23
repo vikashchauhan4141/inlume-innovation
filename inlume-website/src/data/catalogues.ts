@@ -1,3 +1,6 @@
+/* ── Cloudflare R2 CDN base URL ── */
+const R2_BASE = 'https://pub-79e2c5f6ed0f48d0a88dfc381a417e98.r2.dev';
+
 export interface CatalogueItem {
   slug: string;
   label: string;
@@ -19,7 +22,7 @@ export const CATALOGUES: CatalogueItem[] = [
     label: 'Flood Lighting',
     subtitle: 'High-Power Flood & Area Lights',
     desc: 'Industrial-grade floodlights for stadiums, warehouses, construction sites & large outdoor areas.',
-    file: '/docs/INLUME_Flood_Lighting_Catalogue.pdf',
+    file: `${R2_BASE}/INLUME_Flood_Lighting_Catalogue.pdf`,
     tag: 'FL',
     tagline: 'Powerful illumination for every corner',
     accentColor: '#f97316',
@@ -32,7 +35,7 @@ export const CATALOGUES: CatalogueItem[] = [
     label: 'Indoor Lighting',
     subtitle: 'Panel, Downlight & Office Range',
     desc: 'Energy-efficient panels, downlights and office luminaires for commercial & corporate interiors.',
-    file: '/docs/INLUME_Indoor_Lighting_Catalogue.pdf',
+    file: `${R2_BASE}/INLUME_Indoor_Lighting_Catalogue.pdf`,
     tag: 'IN',
     tagline: 'Bright spaces, productive minds',
     accentColor: '#3b82f6',
@@ -45,7 +48,7 @@ export const CATALOGUES: CatalogueItem[] = [
     label: 'Interior Lighting',
     subtitle: 'Décor & Architectural Lighting',
     desc: 'Elegant architectural and decorative lighting solutions designed for premium residential & hospitality.',
-    file: '/docs/INLUME_Interior_Lighting_Catalogue_.pdf',
+    file: `${R2_BASE}/INLUME_Interior_Lighting_Catalogue_.pdf`,
     tag: 'IT',
     tagline: 'Where light meets art',
     accentColor: '#a855f7',
@@ -58,7 +61,7 @@ export const CATALOGUES: CatalogueItem[] = [
     label: 'Lights Catalogue',
     subtitle: 'Full Product Range Overview',
     desc: 'A comprehensive overview of the complete Inlume Innovations LED lighting product portfolio.',
-    file: '/docs/INLUME_Lights_Catalogue.pdf',
+    file: `${R2_BASE}/INLUME_Lights_Catalogue.pdf`,
     tag: 'LC',
     tagline: 'Everything we make, all in one place',
     accentColor: '#14b8a6',
@@ -71,7 +74,7 @@ export const CATALOGUES: CatalogueItem[] = [
     label: 'Street Lighting',
     subtitle: 'Road, Highway & Outdoor Lights',
     desc: 'IP66-rated street and highway luminaires engineered for long life and reliable outdoor performance.',
-    file: '/docs/INLUME_Street_Lighting_Catalogue.pdf',
+    file: `${R2_BASE}/INLUME_Street_Lighting_Catalogue.pdf`,
     tag: 'ST',
     tagline: 'Lighting the roads that connect us',
     accentColor: '#22c55e',
@@ -84,7 +87,7 @@ export const CATALOGUES: CatalogueItem[] = [
     label: 'Solar Street Lighting',
     subtitle: 'Solar-Powered Outdoor & Street Lights',
     desc: 'Self-sufficient solar street lights with integrated batteries — zero electricity cost, zero wiring.',
-    file: '/docs/INLUME_Solar_Street_Lighting_Catalogue.pdf',
+    file: `${R2_BASE}/INLUME_Solar_Street_Lighting_Catalogue.pdf`,
     tag: 'SS',
     tagline: 'Harnessing sunlight for smarter streets',
     accentColor: '#0ea5e9',
@@ -97,7 +100,7 @@ export const CATALOGUES: CatalogueItem[] = [
     label: 'Super Model',
     subtitle: 'Premium & Signature Collection',
     desc: 'Our flagship signature range — high-performance, aesthetically refined luminaires for elite projects.',
-    file: '/docs/INLUME_Super_Model_Catalogue .pdf',
+    file: `${R2_BASE}/INLUME_Super_Model_Catalogue%20.pdf`,
     tag: 'SM',
     tagline: 'The pinnacle of illumination engineering',
     accentColor: '#eab308',
