@@ -239,7 +239,7 @@ export default function CataloguesPageClient() {
           <div className="absolute -top-40 right-0 w-[500px] h-[500px] rounded-full"
             style={{ background: 'radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 65%)' }} />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-950/40 z-0" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/55 to-slate-950/15 z-0" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 pb-8 w-full">
           {/* Breadcrumb */}
@@ -257,9 +257,7 @@ export default function CataloguesPageClient() {
               Catalogues
             </span>
           </h1>
-          <p className="text-gray-300 text-xs sm:text-sm max-w-xl">
-            Select a catalogue to browse every page online — no download required.
-          </p>
+
         </div>
       </section>
 

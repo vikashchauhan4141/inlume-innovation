@@ -18,6 +18,19 @@ export interface CatalogueItem {
 
 export const CATALOGUES: CatalogueItem[] = [
   {
+    slug: 'street-lighting',
+    label: 'Street Lighting',
+    subtitle: 'Road, Highway & Outdoor Lights',
+    desc: 'IP66-rated street and highway luminaires engineered for long life and reliable outdoor performance.',
+    file: `${R2_BASE}/INLUME_Street_Lighting_Catalogue.pdf`,
+    tag: 'ST',
+    tagline: 'Lighting the roads that connect us',
+    accentColor: '#22c55e',
+    gradientFrom: '#15803d',
+    gradientTo: '#22c55e',
+    tagBg: 'rgba(34,197,94,0.12)',
+  },
+  {
     slug: 'flood-lighting',
     label: 'Flood Lighting',
     subtitle: 'High-Power Flood & Area Lights',
@@ -68,19 +81,6 @@ export const CATALOGUES: CatalogueItem[] = [
     gradientFrom: '#0f766e',
     gradientTo: '#14b8a6',
     tagBg: 'rgba(20,184,166,0.12)',
-  },
-  {
-    slug: 'street-lighting',
-    label: 'Street Lighting',
-    subtitle: 'Road, Highway & Outdoor Lights',
-    desc: 'IP66-rated street and highway luminaires engineered for long life and reliable outdoor performance.',
-    file: `${R2_BASE}/INLUME_Street_Lighting_Catalogue.pdf`,
-    tag: 'ST',
-    tagline: 'Lighting the roads that connect us',
-    accentColor: '#22c55e',
-    gradientFrom: '#15803d',
-    gradientTo: '#22c55e',
-    tagBg: 'rgba(34,197,94,0.12)',
   },
   {
     slug: 'solar-street-lighting',

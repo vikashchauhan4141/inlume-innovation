@@ -18,8 +18,8 @@ export default function HeroSection() {
           />
           
           {/* Gradient Overlay for Text Legibility & Mood */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-950/35" />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/60 opacity-90" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/55 to-slate-950/15" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/30 opacity-60" />
         </div>
 
         {/* Banner Content Container with ample top padding to position text lower down */}
